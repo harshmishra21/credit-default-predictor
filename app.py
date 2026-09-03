@@ -10,6 +10,13 @@ st.set_page_config(page_title="Credit Card Default Predictor", layout="wide")
 st.title("🏦 Credit Card Default Prediction")
 st.write("Predict whether a customer will default on their credit card payment next month")
 
+# Google Colab notebook link
+st.info(
+    "📓 **Want to explore the full ML pipeline?** "
+    "[Open the Research Notebook in Google Colab ↗](https://colab.research.google.com/drive/1KoNjKJjDyzscJkjukelwExzd6r9FyGXj?usp=sharing) "
+    "— covers EDA, model training, evaluation & more."
+)
+
 # Load model and scaler
 @st.cache_resource
 def load_model_and_scaler():
@@ -21,6 +28,16 @@ model, scaler = load_model_and_scaler()
 
 # Sidebar for input
 st.sidebar.header("📋 Customer Information")
+
+# Colab link in sidebar
+st.sidebar.markdown("---")
+st.sidebar.markdown(
+    "### 📓 Research Notebook\n"
+    "Explore the full ML pipeline including EDA, model training and evaluation.\n\n"
+    "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]("
+    "https://colab.research.google.com/drive/1KoNjKJjDyzscJkjukelwExzd6r9FyGXj?usp=sharing)"
+)
+st.sidebar.markdown("---")
 
 # Create input fields for all 23 features
 col1, col2 = st.columns(2)
