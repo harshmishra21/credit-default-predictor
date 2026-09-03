@@ -31,9 +31,8 @@ This project was designed, engineered, and developed by:
 10. [Security, Data Privacy & Breach Prevention](#-security-data-privacy--breach-prevention)
 11. [Repository Structure](#-repository-structure)
 12. [Installation & Local Setup](#-installation--local-setup)
-13. [Deployment Guide (Streamlit Cloud & GitHub)](#-deployment-guide-streamlit-cloud--github)
-14. [Future Scope & Roadmap](#-future-scope--roadmap)
-15. [License & Acknowledgments](#-license--acknowledgments)
+13. [Future Scope & Roadmap](#-future-scope--roadmap)
+14. [License & Acknowledgments](#-license--acknowledgments)
 
 ---
 
@@ -266,8 +265,8 @@ Customer_default_prediction/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/harshmishra21/credit-default-predictor.git
-cd credit-default-predictor
+git clone <repository-url>
+cd <repository-directory>
 ```
 
 ### 2. Create and Activate a Virtual Environment
@@ -297,42 +296,6 @@ Your default browser will automatically open:
 Local URL: http://localhost:8501
 Network URL: http://<your-ip>:8501
 ```
-
----
-
-## 🚀 Deployment Guide (Streamlit Cloud & GitHub)
-
-### Pushing to GitHub
-
-1. Initialize git and check status:
-   ```bash
-   git init
-   git status
-   ```
-2. Add all project files:
-   ```bash
-   git add .
-   ```
-3. Commit changes:
-   ```bash
-   git commit -m "feat: complete credit default prediction pipeline, streamlit app, and documentation"
-   ```
-4. Set branch to main, link your GitHub remote, and push:
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/harshmishra21/credit-default-predictor.git
-   git push -u origin main
-   ```
-
-### Deploying to Streamlit Community Cloud (Free)
-
-1. Navigate to [share.streamlit.io](https://share.streamlit.io/) and log in with your GitHub account.
-2. Click **"New app"**.
-3. Select your repository: `harshmishra21/credit-default-predictor`.
-4. Set the branch to: `main`.
-5. Set the Main file path to: `app.py`.
-6. Click **"Deploy!"**.
-7. Streamlit Cloud will read `requirements.txt`, install dependencies, load the serialized model, and publish your live app with a public URL!
 
 ---
 
