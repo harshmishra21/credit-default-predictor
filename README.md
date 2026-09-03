@@ -71,34 +71,46 @@ Standard classification accuracy is misleading in credit risk due to significant
 
 ```mermaid
 flowchart TD
-    A[Raw UCI Credit Card Dataset\n30,000 Records x 24 Features] --> B[Data Cleaning & Validation]
-    B --> B1[Drop Non-Predictive IDs]
-    B --> B2[Consolidate Categorical Anomalies\nEDUCATION: 0,5,6 -> 4 | MARRIAGE: 0 -> 3]
-    B --> B3[Verify Nulls & Deduplication]
+    A["Raw UCI Credit Card Dataset<br/>30,000 Records x 24 Features"] --> B["Data Cleaning & Validation"]
+    B --> B1["Drop Non-Predictive IDs"]
+    B --> B2["Consolidate Categorical Anomalies<br/>EDUCATION: 0, 5, 6 to 4 and MARRIAGE: 0 to 3"]
+    B --> B3["Verify Nulls & Deduplication"]
     
-    B1 & B2 & B3 --> C[Exploratory Data Analysis\nDistributions, Correlations & Risk Trends]
+    B1 --> C["Exploratory Data Analysis<br/>Distributions, Correlations & Risk Trends"]
+    B2 --> C
+    B3 --> C
     
-    C --> D[Data Partitioning & Scaling]
-    D --> D1[Stratified 80/20 Train-Test Split]
-    D --> D2[StandardScaler Standardization\nZero Mean, Unit Variance]
+    C --> D["Data Partitioning & Scaling"]
+    D --> D1["Stratified 80/20 Train-Test Split"]
+    D --> D2["StandardScaler Standardization<br/>Zero Mean, Unit Variance"]
     
-    D1 & D2 --> E[Model Training & Benchmarking]
-    E --> E1[Logistic Regression\nCost-Sensitive Balanced]
-    E --> E2[Decision Tree\nDepth-Constrained max_depth=6]
-    E --> E3[Random Forest Classifier\n200 Estimators, max_depth=10, Balanced]
-    E --> E4[Gradient Boosting Classifier\n200 Estimators, lr=0.1, max_depth=3]
+    D1 --> E["Model Training & Benchmarking"]
+    D2 --> E
     
-    E1 & E2 & E3 & E4 --> F[Model Evaluation & Selection]
-    F --> F1[Metric Comparison: Accuracy, Precision, Recall, F1]
-    F --> F2[ROC Curve & AUC Score Analysis]
-    F --> F3[Confusion Matrices & Cost Optimization]
+    E --> E1["Logistic Regression<br/>Cost-Sensitive Balanced"]
+    E --> E2["Decision Tree<br/>Depth-Constrained max_depth=6"]
+    E --> E3["Random Forest Classifier<br/>200 Estimators, max_depth=10, Balanced"]
+    E --> E4["Gradient Boosting Classifier<br/>200 Estimators, lr=0.1, max_depth=3"]
     
-    F --> G[Model Serialization]
-    G --> G1[random_forest_model.pkl]
-    G --> G2[scaler.pkl]
+    E1 --> F["Model Evaluation & Selection"]
+    E2 --> F
+    E3 --> F
+    E4 --> F
     
-    G1 & G2 --> H[Streamlit Web Application\napp.py]
-    H --> I[Live Credit Officer Decision Dashboard]
+    F --> F1["Metric Comparison: Accuracy, Precision, Recall, F1"]
+    F --> F2["ROC Curve & AUC Score Analysis"]
+    F --> F3["Confusion Matrices & Cost Optimization"]
+    
+    F1 --> G["Model Serialization"]
+    F2 --> G
+    F3 --> G
+    
+    G --> G1["random_forest_model.pkl"]
+    G --> G2["scaler.pkl"]
+    
+    G1 --> H["Streamlit Web Application<br/>app.py"]
+    G2 --> H
+    H --> I["Live Credit Officer Decision Dashboard"]
 ```
 
 ---
