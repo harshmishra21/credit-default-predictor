@@ -45,9 +45,9 @@ with col2:
                                               5: "5 month delay", 6: "6+ month delay"}[x])
     
     # Previous repayment status
-    pay_2 = st.selectbox("Repayment Status 2 Months Ago (PAY_2)", [-1, 0, 1, 2, 3, 4, 5, 6], value=0)
-    pay_3 = st.selectbox("Repayment Status 3 Months Ago (PAY_3)", [-1, 0, 1, 2, 3, 4, 5, 6], value=0)
-    pay_4 = st.selectbox("Repayment Status 4 Months Ago (PAY_4)", [-1, 0, 1, 2, 3, 4, 5, 6], value=0)
+    pay_2 = st.selectbox("Repayment Status 2 Months Ago (PAY_2)", [-1, 0, 1, 2, 3, 4, 5, 6], index=1)
+    pay_3 = st.selectbox("Repayment Status 3 Months Ago (PAY_3)", [-1, 0, 1, 2, 3, 4, 5, 6], index=1)
+    pay_4 = st.selectbox("Repayment Status 4 Months Ago (PAY_4)", [-1, 0, 1, 2, 3, 4, 5, 6], index=1)
 
 # Bill amounts
 st.sidebar.subheader("💳 Bill Amounts (NT$)")
@@ -62,8 +62,8 @@ pay_amt2 = st.sidebar.number_input("Payment Amount (Month 2)", min_value=0, valu
 pay_amt3 = st.sidebar.number_input("Payment Amount (Month 3)", min_value=0, value=2000, step=100)
 
 # Additional repayment status fields
-pay_5 = st.sidebar.selectbox("Repayment Status 5 Months Ago (PAY_5)", [-1, 0, 1, 2, 3, 4, 5, 6], value=0)
-pay_6 = st.sidebar.selectbox("Repayment Status 6 Months Ago (PAY_6)", [-1, 0, 1, 2, 3, 4, 5, 6], value=0)
+pay_5 = st.sidebar.selectbox("Repayment Status 5 Months Ago (PAY_5)", [-1, 0, 1, 2, 3, 4, 5, 6], index=1)
+pay_6 = st.sidebar.selectbox("Repayment Status 6 Months Ago (PAY_6)", [-1, 0, 1, 2, 3, 4, 5, 6], index=1)
 
 # More bill and payment amounts
 bill_amt4 = st.sidebar.number_input("Bill Amount (Month 4)", min_value=0, value=5000, step=100)

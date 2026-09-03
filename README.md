@@ -1,6 +1,7 @@
 # 🏦 Credit Card Customer Default Prediction System
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KoNjKJjDyzscJkjukelwExzd6r9FyGXj?usp=sharing)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.6.1-orange.svg?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/pandas-2.0%2B-150458.svg?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
@@ -28,11 +29,12 @@ This project was designed, engineered, and developed by:
 7. [Machine Learning Modeling & Benchmark](#-machine-learning-modeling--benchmark)
 8. [Feature Importance & Risk Drivers](#-feature-importance--risk-drivers)
 9. [Streamlit Web Application](#-streamlit-web-application)
-10. [Security, Data Privacy & Breach Prevention](#-security-data-privacy--breach-prevention)
-11. [Repository Structure](#-repository-structure)
-12. [Installation & Local Setup](#-installation--local-setup)
-13. [Future Scope & Roadmap](#-future-scope--roadmap)
-14. [License & Acknowledgments](#-license--acknowledgments)
+10. [Open in Google Colab](#-open-in-google-colab)
+11. [Security, Data Privacy & Breach Prevention](#-security-data-privacy--breach-prevention)
+12. [Repository Structure](#-repository-structure)
+13. [Installation & Local Setup](#-installation--local-setup)
+14. [Future Scope & Roadmap](#-future-scope--roadmap)
+15. [License & Acknowledgments](#-license--acknowledgments)
 
 ---
 
@@ -221,6 +223,24 @@ The interactive web application (`app.py`) provides an operational interface for
   - 🟢 **LOW RISK - UNLIKELY TO DEFAULT**: Highlighted in green for low-probability profiles.
   - 🔴 **HIGH RISK - LIKELY TO DEFAULT**: Clear alert triggered when default risk exceeds threshold.
 * **Optimized Architecture:** Employs `@st.cache_resource` for instant model loading and verified column alignment matching the scikit-learn pipeline.
+
+---
+
+## 🧪 Open in Google Colab
+
+You can run the full research notebook — covering data loading, EDA, preprocessing, model training, evaluation, and export — directly in your browser without any local installation:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KoNjKJjDyzscJkjukelwExzd6r9FyGXj?usp=sharing)
+
+**What the notebook covers:**
+- 📥 Dataset loading & inspection
+- 🧹 Data cleaning & categorical anomaly fixes
+- 📊 Exploratory Data Analysis (6 visualizations)
+- ⚖️ Feature scaling with `StandardScaler`
+- 🤖 Training 4 models: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting
+- 📈 Model comparison (Accuracy, Precision, Recall, F1-Score)
+- 🔍 ROC Curve & Confusion Matrix analysis
+- 💾 Saving the trained model & scaler as `.pkl` files
 
 ---
 
