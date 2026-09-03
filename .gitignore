@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints & cache
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Security & Credentials (Zero-Breach Protection)
+.env
+.env.*
+*.env
+*.secret
+*.pem
+*.key
+*.cert
+credentials.json
+client_secret*.json
+secrets.toml
+.streamlit/secrets.toml
+*.log
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Optional: Large data dumps (raw loan datasets with potential PII)
+# loan_dataset.csv
+# raw_data/
